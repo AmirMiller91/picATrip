@@ -1,0 +1,10 @@
+{% extends "picogram/base.html" %}
+{% block title %}All Posts{% endblock title %}
+{% block content %}
+	<h1>All Posts:</h1>
+	{% for post in posts %}
+		<h2>{{ post.title }}</h2>
+		<a href="{{ post.title_photo }}">Click here to see the title photo</a>
+		<p>{{ post.content }}</p>
+	{% endfor %}
+{% endblock content %}

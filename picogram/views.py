@@ -1,6 +1,9 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def addPost(request):
-    return HttpResponse('<h1>Add a Post</h1>')
+    return render(request, 'picogram/addPost.html')
+
+
+def viewPosts(request):
+    return render(request, 'picogram/viewPosts.html')
